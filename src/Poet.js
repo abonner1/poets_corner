@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Poet = () => {
+const Poet = ({ poet }) => {
   return (
     <p>Poet info here</p>
   )

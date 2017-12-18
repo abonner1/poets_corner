@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Poet from './Poet'
 
 class Poets extends Component {
   constructor({ poets }) {
@@ -8,13 +9,15 @@ class Poets extends Component {
 
   listPoets() {
     return this.poets.map((poet) => {
-      return (
-        <li>
-          <p>{poet.firstName} {poet.lastName}</p>
-          <p>Born: {poet.birthDate} - Died: {poet.deathDate}</p>
-          <p>{poet.bio}</p>
-        </li>
-      )
+      return <Poet poet={poet} />
+
+      // return (
+      //   <li>
+      //     <p>{poet.firstName} {poet.lastName}</p>
+      //     <p>Born: {poet.birthDate} - Died: {poet.deathDate}</p>
+      //     <p>{poet.bio}</p>
+      //   </li>
+      // )
     })
   }
 

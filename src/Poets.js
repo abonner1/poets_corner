@@ -8,17 +8,7 @@ class Poets extends Component {
   }
 
   listPoets() {
-    return this.poets.map((poet) => {
-      return <Poet poet={poet} />
-
-      // return (
-      //   <li>
-      //     <p>{poet.firstName} {poet.lastName}</p>
-      //     <p>Born: {poet.birthDate} - Died: {poet.deathDate}</p>
-      //     <p>{poet.bio}</p>
-      //   </li>
-      // )
-    })
+    return this.poets.map((poet) => <Poet poet={poet} />)
   }
 
   render() {

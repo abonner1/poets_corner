@@ -8,8 +8,8 @@ class Poets extends Component {
     this.poets = poets
   }
 
-  listPoets() {
-    return this.poets.map((poet) => <Poet key={poet.id} poet={poet} />)
+  listPoets(poets) {
+    return poets.map((poet) => <Poet key={poet.id} poet={poet} />)
   }
 
   render() {
@@ -17,7 +17,7 @@ class Poets extends Component {
       <div>
         <h2>Poets</h2>
         <ul>
-          {this.listPoets()}
+          {this.listPoets(this.poets)}
         </ul>
       </div>
     )

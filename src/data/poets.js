@@ -1,5 +1,6 @@
 export var poets = [
   {
+    id: 1,
     firstName: "Edmund",
     lastName: "Spenser",
     birthDate: "1552",
@@ -7,6 +8,7 @@ export var poets = [
     bio: "English poet best known for The Faerie Queen, an epic poem and fantastical allegory celebrating the Tudor dynasty of Elizabeth I."
   },
   {
+    id: 2,
     firstName: "John",
     lastName: "Milton",
     birthDate: "December 9, 1608",

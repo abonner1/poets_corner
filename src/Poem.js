@@ -9,4 +9,4 @@ const Poem = ({ poem }) => {
   )
 }
 
-export default Poem`
+export default Poem

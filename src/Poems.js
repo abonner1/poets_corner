@@ -11,7 +11,11 @@ class Poems extends Component {
       <div>
         <ul>
           {this.poems.map((poem) => {
-            return <li>{poem.title}</li>
+            return (
+              <li>
+                <p>{poem.title} ({poem.publicationDate}) by {poem.author}</p>
+                <p>{poem.about}</p>
+              </li>)
           })}
         </ul>
       </div>

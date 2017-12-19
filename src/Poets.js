@@ -9,7 +9,7 @@ class Poets extends Component {
   }
 
   listPoets() {
-    return this.poets.map((poet) => <Poet poet={poet} />)
+    return this.poets.map((poet) => <Poet key={poet.id} poet={poet} />)
   }
 
   render() {

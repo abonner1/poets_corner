@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 
+import Poem from "./Poem"
+
 class Poems extends Component {
   constructor({ poems }) {
     super()
     this.poems = poems
   }
 
+  listPoems(poems) {
+    return poems.map((poem) => {
+      return <Poem key={poem.id} poem={poem} />
+    })
+  }
+
   render() {
     return (
       <div>
         <ul>
-          {this.poems.map((poem) => {
-            return (
-              <li>
-                <p>{poem.title} ({poem.publicationDate}) by {poem.author}</p>
-                <p>{poem.about}</p>
-              </li>)
-          })}
+          {this.listPoems(this.poems)}
         </ul>
       </div>
     )

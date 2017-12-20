@@ -10,8 +10,8 @@ class Poets extends Component {
     this.match = match
   }
 
-  listPoets(poets) {
-    return poets.map((poet, url) => <Poet key={poet.id} poet={poet} url={url} />)
+  listPoets(poets, url) {
+    return poets.map((poet) => <Poet key={poet.id} poet={poet} url={url} />)
   }
 
   render() {

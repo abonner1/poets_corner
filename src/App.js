@@ -19,8 +19,8 @@ class App extends Component {
           <hr/>
 
           <Route exact path="/" component={Home} />
-          <Route path="/poets" render={() => (
-            <Poets poets={poets} />
+          <Route path="/poets" render={({ match }) => (
+            <Poets poets={poets} match={match} />
           )} />
           <Route path="/poems" render={() => (
             <Poems poems={poems} />

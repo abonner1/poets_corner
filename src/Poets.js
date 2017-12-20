@@ -25,6 +25,17 @@ class Poets extends Component {
     })
   }
 
+  listPoetRoutes(poets, url) {
+    return poets.map((poet) => {
+      let path = this.createPath(poet, url)
+      return (
+        <Route key={poet.id} path={path} render={() => (
+          <Poet poet={poet} />
+        )} />
+      )
+    })
+  }
+
   render() {
     return (
       <div>
@@ -32,6 +43,7 @@ class Poets extends Component {
         <ul>
           {this.listPoets(this.poets, this.match.url)}
         </ul>
+        {this.listPoetRoutes(this.poets, this.match.url)}
       </div>
     )
   }

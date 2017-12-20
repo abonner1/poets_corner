@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Route} from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 import Poet from './Poet'
 
@@ -10,8 +10,19 @@ class Poets extends Component {
     this.match = match
   }
 
+  createPath(poet, url) {
+    return `${url}/${poet.firstName.toLowerCase()}_${poet.lastName.toLowerCase()}`
+  }
+
   listPoets(poets, url) {
-    return poets.map((poet) => <Poet key={poet.id} poet={poet} url={url} />)
+    return poets.map((poet) => {
+      let path = this.createPath(poet, url)
+      return (
+        <li key={poet.id}>
+          <p><Link to={path}>{poet.firstName} {poet.lastName}</Link></p>
+        </li>
+      )
+    })
   }
 
   render() {
@@ -21,8 +32,6 @@ class Poets extends Component {
         <ul>
           {this.listPoets(this.poets, this.match.url)}
         </ul>
-
-        <Route path={`${this.match.url}/edmund_spenser`} />
       </div>
     )
   }

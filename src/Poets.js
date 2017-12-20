@@ -12,7 +12,7 @@ class Poets extends Component {
     this.match = match
   }
 
-  listPoets(poets, url) {
+  listPoetLinks(poets, url) {
     return poets.map((poet) => {
       let path = createPath(poet, url)
       return (
@@ -39,7 +39,7 @@ class Poets extends Component {
       <div>
         <h2>Poets</h2>
         <ul>
-          {this.listPoets(this.poets, this.match.url)}
+          {this.listPoetLinks(this.poets, this.match.url)}
         </ul>
         {this.listPoetRoutes(this.poets, this.match.url)}
       </div>

@@ -9,14 +9,13 @@ class Poems extends Component {
   }
 
   listPoems(poems) {
-    return poems.map((poem) => {
-      return <Poem key={poem.id} poem={poem} />
-    })
+    return poems.map((poem) => <Poem key={poem.id} poem={poem} />)
   }
 
   render() {
     return (
       <div>
+        <h1>Poems</h1>
         <ul>
           {this.listPoems(this.poems)}
         </ul>

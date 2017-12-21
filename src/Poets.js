@@ -27,9 +27,7 @@ class Poets extends Component {
     return poets.map((poet) => {
       let path = createPath(poet, url)
       return (
-        <Route key={poet.id} path={path} render={() => (
-          <Poet poet={poet} />
-        )} />
+        <Route key={poet.id} path={path} render={() => <Poet poet={poet} />} />
       )
     })
   }

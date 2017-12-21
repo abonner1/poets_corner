@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import VisiblePoets from './VisiblePoets'
+
 import Home from './Home'
-import Poets from './Poets'
 import Poems from './Poems'
-import { poets, poems } from './data'
+import { poems } from './data'
 
 class App extends Component {
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
 
           <Route exact path="/" component={Home} />
           <Route path="/poets" render={({ match }) => (
-            <Poets poets={poets} match={match} />
+            <VisiblePoets match={match} />
           )} />
           <Route path="/poems" render={() => (
             <Poems poems={poems} />

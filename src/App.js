@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './Home'
 import Poets from './Poets'
 import Poems from './Poems'
-import { poets } from './data/data'
-import { poems } from './data/data'
+import { poets, poems } from './data'
 
 class App extends Component {
   render() {

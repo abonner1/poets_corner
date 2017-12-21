@@ -37,7 +37,7 @@ class Poets extends Component {
   render() {
     return (
       <div>
-        <h2>Poets</h2>
+        <h1>Poets</h1>
         <ul>
           {this.listPoetLinks(this.poets, this.match.url)}
         </ul>

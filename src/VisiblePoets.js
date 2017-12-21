@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { poets } from './data'
 
-import Poets from './poets'
+import Poets from './Poets'
 
 class VisiblePoets extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class VisiblePoets extends Component {
 
   render() {
     return (
-      <Poets poets={this.state.poets} />
+      <Poets poets={this.state.poets} match={this.props.match} />
     )
   }
 }

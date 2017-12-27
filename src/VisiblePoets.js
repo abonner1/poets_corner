@@ -26,7 +26,9 @@ class VisiblePoets extends Component {
 
   render() {
     return (
-      <Poets poets={this.state.poets} match={this.props.match} />
+      <div>
+        <Poets poets={this.state.poets} match={this.props.match} onChange={this.filterPoets} />
+      </div>
     )
   }
 }

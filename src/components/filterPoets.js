@@ -6,3 +6,5 @@ const filterPoets = () => (
     <input />
   </form>
 )
+
+export default filterPoets

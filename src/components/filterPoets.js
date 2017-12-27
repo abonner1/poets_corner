@@ -1,10 +1,10 @@
 import React from 'react'
 
-const filterPoets = () => (
+const FilterPoets = () => (
   <form>
     <label></label>
     <input />
   </form>
 )
 
-export default filterPoets
+export default FilterPoets

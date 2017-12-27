@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { poets } from './data'
 
 import Poets from './Poets'
-import FilterPoets from './components/FilterPoets'
 
 class VisiblePoets extends Component {
   constructor() {
@@ -27,10 +26,7 @@ class VisiblePoets extends Component {
 
   render() {
     return (
-      <div>
-        <FilterPoets />
-        <Poets poets={this.state.poets} match={this.props.match} onChange={this.filterPoets} />
-      </div>
+      <Poets poets={this.state.poets} match={this.props.match} onChange={this.filterPoets} />
     )
   }
 }

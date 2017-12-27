@@ -4,11 +4,13 @@ import { Route, Link } from 'react-router-dom'
 import { createPath } from './helpers'
 
 import Poet from './Poet'
+import FilterPoets from './components/FilterPoets'
 
 const Poets = ({ poets, match }) =>  {
   return (
     <div>
       <h1>Poets</h1>
+      <FilterPoets />
       <ul>
         {poets.map((poet) => {
           let path = createPath(poet, match.url)

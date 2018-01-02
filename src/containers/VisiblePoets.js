@@ -16,10 +16,15 @@ class VisiblePoets extends Component {
     })
   }
 
-  filterPoets(poetFilter) {
+  filterPoets = (poetFilter) => {
+    let filteredPoets = this.state.poets
+    filteredPoets = filteredPoets.filter((poet) => {
+      return poet.lastName.toLowerCase().search(
+        poetFilter.toLowerCase()) !== -1
+    })
     this.setState({
       poets: [
-        this.state.poets.filter((poet) => poet.toLowerCase() === poetFilter.toLowerCase())
+        ...filteredPoets
       ]
     })
   }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import { poets } from './data'
+import { poets } from '../data'
 
-import Poets from './Poets'
+import Poets from '../Poets'
 
 class VisiblePoets extends Component {
   constructor() {

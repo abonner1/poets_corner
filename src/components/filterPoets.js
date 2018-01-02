@@ -12,13 +12,7 @@ class FilterPoets extends Component {
     this.setState({
       poetFilter: event.target.value
     })
-  }
-
-  handleSubmit = (event) => {
-    this.setState({
-      poetFilter: ""
-    })
-    event.preventDefault()
+    this.props.onChange(this.state.poetFilter)
   }
 
   render() {
@@ -26,7 +20,6 @@ class FilterPoets extends Component {
       <form>
         <label htmlFor="filter">Filter by Poet: </label>
         <input type="text" id="filter" value={this.poetFilter} onChange={this.handleChange} />
-        <button type="submit" onSubmit={this.handleSubmit}>Filter</button>
       </form>
     )
   }

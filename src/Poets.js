@@ -6,11 +6,11 @@ import { createPath } from './helpers'
 import Poet from './Poet'
 import FilterPoets from './components/FilterPoets'
 
-const Poets = ({ poets, match }) =>  {
+const Poets = ({ poets, match, onChange }) =>  {
   return (
     <div>
       <h1>Poets</h1>
-      <FilterPoets />
+      <FilterPoets onChange={onChange} />
       <ul>
         {poets.map((poet) => {
           let path = createPath(poet, match.url)

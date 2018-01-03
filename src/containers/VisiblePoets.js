@@ -13,7 +13,7 @@ class VisiblePoets extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       poets: [...poets]
     })

@@ -27,7 +27,7 @@ class VisiblePoets extends Component {
         poetFilter.toLowerCase()) !== -1
     })
     this.setState({
-      poets: [...filteredPoets]
+      filteredPoets
     })
   }
 

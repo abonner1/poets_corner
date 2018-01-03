@@ -23,7 +23,7 @@ class VisiblePoets extends Component {
   filterPoets = (poetFilter) => {
     let filteredPoets = this.state.poets
     filteredPoets = filteredPoets.filter((poet) => {
-      return poet.lastName.toLowerCase().search(
+      return poet.lastName.toLowerCase().indexOf(
         poetFilter.toLowerCase()) !== -1
     })
     this.setState({

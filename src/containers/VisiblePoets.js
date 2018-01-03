@@ -15,7 +15,8 @@ class VisiblePoets extends Component {
 
   componentWillMount() {
     this.setState({
-      poets: [...poets]
+      poets,
+      filteredPoets: poets
     })
   }
 

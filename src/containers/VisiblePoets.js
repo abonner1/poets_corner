@@ -7,7 +7,10 @@ import Poets from '../Poets'
 class VisiblePoets extends Component {
   constructor() {
     super()
-    this.state = { poets: [] }
+    this.state = {
+      poets: [],
+      filteredPoets: []
+    }
   }
 
   componentDidMount() {
@@ -23,9 +26,7 @@ class VisiblePoets extends Component {
         poetFilter.toLowerCase()) !== -1
     })
     this.setState({
-      poets: [
-        ...filteredPoets
-      ]
+      poets: [...filteredPoets]
     })
   }
 

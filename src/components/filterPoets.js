@@ -17,10 +17,10 @@ class FilterPoets extends Component {
 
   render() {
     return (
-      <form>
+      <div>
         <label htmlFor="filter">Filter by Poet: </label>
         <input type="text" id="filter" value={this.poetFilter} onChange={this.handleChange} />
-      </form>
+      </div>
     )
   }
 }

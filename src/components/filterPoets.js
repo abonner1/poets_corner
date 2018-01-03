@@ -12,14 +12,14 @@ class FilterPoets extends Component {
     this.setState({
       poetFilter: event.target.value
     })
-    this.props.onChange(this.state.poetFilter)
+    this.props.onChange(event.target.value)
   }
 
   render() {
     return (
       <div>
         <label htmlFor="filter">Filter by Poet: </label>
-        <input type="text" id="filter" value={this.poetFilter} onChange={this.handleChange} />
+        <input type="text" id="filter" value={this.state.poetFilter} onChange={this.handleChange} />
       </div>
     )
   }

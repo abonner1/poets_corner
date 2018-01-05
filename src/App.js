@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import VisiblePoets from './containers/VisiblePoets'
 
 import Home from './Home'
-import Poems from './Poems'
+import Poems from './containers/Poems'
 import { poems } from './test/data'
 
 class App extends Component {

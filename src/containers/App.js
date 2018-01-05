@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import Home from './containers/Home'
-import VisiblePoets from './containers/VisiblePoets'
-import Poems from './containers/Poems'
-import { poems } from './test/data'
+import Home from './Home'
+import VisiblePoets from './VisiblePoets'
+import Poems from './Poems'
+import { poems } from '../test/data'
 
 class App extends Component {
   render() {

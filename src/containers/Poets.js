@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import { createPath } from '../helpers'
+import { createPath } from '../helpers/helpers'
 
 import Poet from '../components/Poet'
 import FilterPoets from '../components/FilterPoets'

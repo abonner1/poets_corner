@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import { createPath } from './helpers'
+import { createPath } from '../helpers'
 
-import Poet from './components/Poet'
-import FilterPoets from './components/FilterPoets'
+import Poet from '../components/Poet'
+import FilterPoets from '../components/FilterPoets'
 
 const Poets = ({ poets, match, onChange }) =>  {
   return (

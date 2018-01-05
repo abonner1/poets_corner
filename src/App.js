@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import VisiblePoets from './containers/VisiblePoets'
-
 import Home from './Home'
+import VisiblePoets from './containers/VisiblePoets'
 import Poems from './containers/Poems'
 import { poems } from './test/data'
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Poem from "./Poem"
+import Poem from "./components/Poem"
 
 class Poems extends Component {
   constructor({ poems }) {

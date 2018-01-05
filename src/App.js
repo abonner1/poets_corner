@@ -5,7 +5,7 @@ import VisiblePoets from './containers/VisiblePoets'
 
 import Home from './Home'
 import Poems from './Poems'
-import { poems } from './data'
+import { poems } from './test/data'
 
 class App extends Component {
   render() {

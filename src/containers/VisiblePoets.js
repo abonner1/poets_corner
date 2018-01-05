@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { poets } from '../data'
+import { poets } from '../test/data'
 
 import Poets from '../Poets'
 

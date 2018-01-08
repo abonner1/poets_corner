@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
+import { createPoemsPath } from '../helpers/routerHelpers'
+
 import Poem from "../components/Poem"
 
 const Poems = ({poems, match}) => {
@@ -8,7 +10,14 @@ const Poems = ({poems, match}) => {
     <div>
       <h1>Poems</h1>
       <ul>
-        {poems.map((poem) => <li key={poem.id}><Link to={match.url + '/' + poem.title.toLowerCase().split(" ").join("_")}>{poem.title}</Link></li>)}
+        {poems.map((poem) => {
+          let path = createPoemsPath(poem, match.url)
+          return (
+            <li key={poem.id}>
+              <Link to={path}>{poem.title}</Link>
+            </li>
+          )
+        })}
       </ul>
 
       {poems.map((poem) => {

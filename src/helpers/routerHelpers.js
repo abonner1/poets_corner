@@ -2,4 +2,8 @@ const createPoetPath = (poet, url) => {
   return `${url}/${poet.firstName.toLowerCase()}_${poet.lastName.toLowerCase()}`
 }
 
-export { createPoetPath }
+const createPoemsPath = (poem, url) => {
+  return `${url}/${poem.title.toLowerCase().replace(/ /g, "_")}`
+}
+
+export { createPoetPath, createPoemsPath }

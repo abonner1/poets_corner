@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import { createPath } from '../helpers/routerHelpers'
+import { createPoetPath } from '../helpers/routerHelpers'
 
 import Poet from '../components/Poet'
 import FilterPoets from '../components/FilterPoets'
@@ -13,7 +13,7 @@ const Poets = ({ poets, match, onChange }) =>  {
       <FilterPoets onChange={onChange} />
       <ul>
         {poets.map((poet) => {
-          let path = createPath(poet, match.url)
+          let path = createPoetPath(poet, match.url)
           return (
             <li key={poet.id}>
               <p><Link to={path}>{poet.firstName} {poet.lastName}</Link></p>
@@ -22,7 +22,7 @@ const Poets = ({ poets, match, onChange }) =>  {
         })}
       </ul>
       {poets.map((poet) => {
-        let path = createPath(poet, match.url)
+        let path = createPoetPath(poet, match.url)
         return (
           <Route key={poet.id} path={path} render={() => <Poet poet={poet} />} />
         )

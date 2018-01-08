@@ -21,8 +21,8 @@ class App extends Component {
           <Route path="/poets" render={({ match }) => (
             <VisiblePoets match={match} />
           )} />
-          <Route path="/poems" render={() => (
-            <Poems poems={poems} />
+          <Route path="/poems" render={({ match }) => (
+            <Poems poems={poems} match={match} />
           )} />
         </div>
       </Router>

@@ -21,7 +21,7 @@ const Poems = ({poems, match}) => {
       </ul>
 
       {poems.map((poem) => {
-        let path = match.url + '/' + poem.title.toLowerCase().split(" ").join("_")
+        let path = createPoemsPath(poem, match.url)
         return (
           <Route key={poem.id} path={path} render={() => <Poem poem={poem} />} />
         )

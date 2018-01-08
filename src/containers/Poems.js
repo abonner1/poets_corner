@@ -19,11 +19,11 @@ class Poems extends Component {
       <div>
         <h1>Poems</h1>
         <ul>
-          {this.poems.map((poem) => <li key={poem.id}><Link to={poem.title.toLowerCase().split(" ").join("_")}>{poem.title}</Link></li>)}
+          {this.poems.map((poem) => <li key={poem.id}><Link to={this.match.url + '/' + poem.title.toLowerCase().split(" ").join("_")}>{poem.title}</Link></li>)}
         </ul>
 
         {this.poems.map((poem) => {
-          let path = this.match.url + poem.title.toLowerCase().split(" ").join("_")
+          let path = this.match.url + '/' + poem.title.toLowerCase().split(" ").join("_")
           return (
             <Route key={poem.id} path={path} render={() => <Poem poem={poem} />} />
           )

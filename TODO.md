@@ -4,7 +4,8 @@
 - [X] Simple Poems View
 - [X] Routes for viewing particular Poets
 - [X] Successfully filter Poets
-- [ ] Routes for viewing particular Poems
+- [X] Routes for viewing particular Poems
+- [ ] Add proptypes for readability
 - [ ] Successfully filter Poems
 - [ ] CRUD functions to build new Poets
 - [ ] CRUD functions to build new Poems
